@@ -112,3 +112,72 @@ def DistanceBetweenPoint(point1, point2):
     return math.sqrt(((x2 - x1) ** 2) + ((y2 - y1) ** 2) + ((z2 - z1) ** 2))     
 
 print(DistanceBetweenPoint(point1, point2))
+
+#task 11
+number = int(input("Enter number: "))
+for i in range(number):
+    result = (-3)**i
+    print(result)
+
+#task 12
+N = int(input())
+dict = {}
+for i in range(1, N + 1):
+    res = 3 * i + 1        
+    dict.update({i:res})
+print(dict)
+
+#task 13
+string1 = str(input('Enter the first line: '))
+string2 = str(input('Enter the second line: '))
+
+print(f'The second line is included in the first {string1.count(string2)} times/times')
+
+#task 14
+num = input('Enter a number with a dot')
+result = 0
+for i in range(len(num)):
+    if (num[i] == '.'):
+        continue
+    result += int(num[i])
+print(result)
+
+#task 15
+num = int(input())
+arr = []
+for i in range(0, num + 1): 
+    if (i == 0):
+        arr.append(1)
+    else:
+        arr.append(arr[i - 1] * (i + 1))
+print(arr)
+
+#task 16
+number = int(input())
+listNum = []
+result = 0
+for i in range(1, number + 1):
+    listNum.append((1 + 1 / i) ** i)
+for j in range(int(len(listNum))):
+    result += listNum[j]
+print(result)
+
+#task 17
+
+#task 18
+import random
+result = list(range(1, 9))
+random.shuffle(result)
+print(result)
+
+#task 19
+from time import perf_counter
+
+len_of_num = input('Enter the len of number: ')
+output_number = 0
+if len_of_num.isdigit():
+    current_time = int(str(perf_counter()).split('.', 1)[-1])
+    output_number = (str(current_time ** (int(len_of_num) // 6 + 1)))[:int(len_of_num)]
+    print(output_number)
+else:
+    print('Please check if the entered value is a number')
